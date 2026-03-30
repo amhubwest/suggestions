@@ -465,21 +465,33 @@ const STATUS_COLORS = {
 };
 
 // ─── FIELD MAPPING ───
-// Maps SharePoint column names to our internal keys.
-// If your SharePoint columns are named differently, update the LEFT side here.
+// SharePoint returns nested objects like { Value: "Safety" } for choice fields
+// and arrays of user objects for people fields. This function extracts the values.
+function val(field) {
+  if (!field) return '';
+  if (typeof field === 'string') return field;
+  if (field.Value !== undefined) return field.Value;
+  if (field.DisplayName !== undefined) return field.DisplayName;
+  return '';
+}
 function mapSharePointItem(item) {
+  // AssignedTo is an array of user objects
+  const assigned = Array.isArray(item.AssignedTo)
+    ? item.AssignedTo.map(u => u.DisplayName || '').filter(Boolean).join('; ')
+    : val(item.AssignedTo);
+
   return {
-    employee:   item['Employee Name']       || item.employee   || '',
-    category:   item['Category']            || item.category   || '',
-    suggestion: item['What is your suggestion?'] || item.suggestion || '',
-    urgency:    item['Urgency']             || item.urgency    || '',
-    tier:       item['Tier Level']          || item.tier       || '',
-    assigned:   item['Assigned To']         || item.assigned   || '',
-    target:     item['Target Completion']   || item.target     || '',
-    status:     item['Status']              || item.status     || '',
-    details:    item['Status Details']      || item.details    || '',
-    reward:     item['Reward']              || item.reward     || '',
-    paid:       item['Paid out']            || item.paid       || ''
+    employee:   val(item.EmployeeName),
+    category:   val(item.SQDCCategory),
+    suggestion: item.field_5 || '',
+    urgency:    val(item.Urgency),
+    tier:       val(item.TierLevel),
+    assigned:   assigned,
+    target:     item.TargetCompletion || '',
+    status:     val(item.field_3),
+    details:    item.field_4 || '',
+    reward:     val(item.Reward),
+    paid:       val(item.Paidout)
   };
 }
 
