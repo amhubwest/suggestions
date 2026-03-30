@@ -1,0 +1,11 @@
+{
+  "updated": "2026-03-29T10:00:00Z",
+  "items": [
+    {"Employee Name":"Gaye Siah AM-HUB","Category":"Safety","What is your suggestion?":"Fix broken hand sanitizer sensor (see photo for location)","Urgency":"Medium","Tier Level":"Tier 1","Assigned To":"Ibarra Miguel RAININ","Target Completion":"3/13/2026","Status":"Completed","Status Details":"Ordered battery replacement arrives Tuesday 3/24","Reward":"N/A","Paid out":""},
+    {"Employee Name":"Noguera Julio RAININ","Category":"Cost","What is your suggestion?":"Replace iPods with iphones","Urgency":"Medium","Tier Level":"Tier 3","Assigned To":"English Jacob MTI-CF","Target Completion":"4/30/2026","Status":"In Progress","Status Details":"Jacob is aligning with vendor to purchase 10 units","Reward":"N/A","Paid out":"n/a"},
+    {"Employee Name":"Dina Gomez Manuel RAININ","Category":"Cost","What is your suggestion?":"Establish a productivity dashboard","Urgency":"Medium","Tier Level":"Tier 3","Assigned To":"Gaye Siah AM-HUB","Target Completion":"3/27/2026","Status":"Completed","Status Details":"","Reward":"$5","Paid out":"yes"},
+    {"Employee Name":"Bruce Norman RAININ","Category":"Cost","What is your suggestion?":"Order scale pallet jacks","Urgency":"Medium","Tier Level":"","Assigned To":"Vigilante Josh RAININ","Target Completion":"3/11/2026","Status":"Completed","Status Details":"Pallet Jack ordered","Reward":"$5","Paid out":"yes"},
+    {"Employee Name":"La Rosa Palomino Gustavo RAININ","Category":"Cost","What is your suggestion?":"Audit and add barcode labels to racks","Urgency":"High","Tier Level":"Tier 2","Assigned To":"Ramirez Marco RAININ","Target Completion":"4/10/2026","Status":"In Progress","Status Details":"Marco submitted the missing locations. Sent to vendor, awaiting order confirmation.","Reward":"$5","Paid out":"yes"},
+    {"Employee Name":"Dina Gomez Manuel RAININ","Category":"Cost","What is your suggestion?":"Walkie talkie's for leadership","Urgency":"High","Tier Level":"","Assigned To":"Ibarra Miguel RAININ","Target Completion":"3/11/2026","Status":"Completed","Status Details":"Purchased and rolling out","Reward":"$5","Paid out":"yes"}
+  ]
+}
